@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+*{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    color:white;
+    overflow: hidden;
+}
+/* img{width: 100%;} */
+p{
+    margin: 0;
+}
+.f-light{
+    font-weight: 300;
+}
+.f-reg{
+    font-weight: 400;
+}
+.f-bold{
+    font-weight: 600;
+}
+.f-xbold{
+    font-weight: 700;
+}
+.f-xxbold{
+    font-weight: 800;
+}
+.pad{
+    padding: 10px;
+}
+.loader{
+  position: absolute;
+  top:0;
+  bottom:0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: darkslategrey;
+}
+.loader div{
+  border: 16px solid #333; /* Light grey */
+  border-top: 16px solid teal; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* --------------- slider -------------------- */
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    bottom:0;
+    right: 0;
+    left: 0;
+    z-index: -999;
+    opacity: .7;
+  }
+  .slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  .slides::-webkit-scrollbar {
+    display: none;
+  }
+  .slides::-webkit-scrollbar-thumb {
+    display: none;
+  }
+  .slides::-webkit-scrollbar-track {
+    display: none;
+  }
+  .slides > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100vh;
+    margin-right: 50px;
+    border-radius: 10px;
+    background: #eee;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 100px;
+  }
+  .slides > div > img{
+   width: 100%;
+   height: 100vh;
+  }
+  .slider > a {
+    display: inline-flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+  }
+  .slider > a:active {
+    top: 1px;
+    color: #1c87c9;
+  }
+  .slider > a:focus {
+    background: #eee;
+  }
+  /* Don't need button navigation */
+  /* @supports (scroll-snap-type) {
+    .slider > a {
+      display: none;
+    }
+  } */
+
+/* .slider{
+    position: absolute;
+    top:0;
+    bottom:0;
+    right: 0;
+    left: 0;
+    z-index: -999;
+    transition: 0.5s;
+}
+.slider-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.slide{
+    width: 100%;
+    height: 100%;
+    float: left;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+}
+.slide > img {
+    object-fit: cover;
+}
+  .slider.next {
+    transform: translateX( calc(-100%));
+  }
+  .slider.prev{
+    transform: translateX( calc(100%));
+  } */
+/* --------------- fine slider -------------------- */
+.main-container{
+    /* background-color: lightblue; */
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    height: 100vh;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+}
+.main-content{
+    display: flex;
+    width: 100%;
+    flex-grow: 4;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 50%;
+}
+.week{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer{
+    width: 100%;
+    flex-grow: 3;
+}
+
+@media (min-width: 768px) {
+    .main-container{
+        max-width: 80%;
+        margin:0 auto;
+    }
+
+}

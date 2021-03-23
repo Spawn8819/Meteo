@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="./assets/all.min.css" rel="icon">
+  <link href="./stile.css" rel="stylesheet">
+
+  <title>Stazione meteo</title>
+</head>
+
+<body>
+  <div class="loader">
+    <div>
+
+    </div>
+  </div>
+  <div class="main-container">
+    <div class="slider">
+
+      <div class="slides">
+        <div id="slide-1">
+          <img src="./assets/cityImage/london.jpg" alt="Second" />
+        </div>
+        <div id="slide-2">
+          <img src="./assets/cityImage/milan.jpg" alt="Third" />
+        </div>
+        <div id="slide-3">
+          <img src="./assets/cityImage/bangkok.jpg" alt="Second" />
+        </div>
+        <div id="slide-4">
+          <img src="./assets/cityImage/losangeles.jpg" alt="Second" />
+        </div>
+        <div id="slide-5">
+          <img src="./assets/cityImage/nairobi.jpg" alt="Second" />
+        </div>
+      </div>
+    </div>
+    <div class="header">
+      <div class="add-element">
+        <img style="width: 2rem;" src="./assets/plus-solid.svg" />
+      </div>
+      <div class="index">
+        <div class="slider-nav">
+          <button id="prev" class="slider-previous">
+            < </button>
+              <a href="#slide-1">1</a>
+              <a href="#slide-2">2</a>
+              <a href="#slide-3">3</a>
+              <a href="#slide-4">4</a>
+              <a href="#slide-5">5</a>
+              <button id="next" class="slider-next"> > </button>
+        </div>
+      </div>
+      <div class="options">
+        <img style="width: 2rem;" src="./assets/cog-solid.svg" />
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="container">
+        <p id="nome" style="text-align: center;" class="f-bold">City London ecc..</p>
+        <p id="tempo" style="text-align: center;" class="f-light">cloudy</p>
+        <p id="gradi" style="text-align: center;font-size:10rem;" class="f-reg">25°</p>
+        <p id="minmax" style="text-align: center;" class="f-bold">23°/30°</p>
+        <p id="icona" style="text-align: center;">
+        </p>
+      </div>
+    </div>
+    <div class="week">
+      <div style="text-align: center;">
+        <p style="text-align: center;">Lun</p>
+        <img style="width: 1.5rem;" src="http://openweathermap.org/img/wn/10d@2x.png" />
+        <p style="text-align: center;font-size: .8rem;">23°/30°</p>
+      </div>
+      <div style="text-align: center;">
+        <p style="text-align: center;">Mar</p>
+        <img style="width: 1.5rem;" src="http://openweathermap.org/img/wn/10d@2x.png" />
+        <p style="text-align: center;font-size: .8rem;">23°/30°</p>
+      </div>
+      <div style="text-align: center;">
+        <p style="text-align: center;">Mer</p>
+        <img style="width: 1.5rem;" src="http://openweathermap.org/img/wn/10d@2x.png" />
+        <p style="text-align: center;font-size: .8rem;">23°/30°</p>
+      </div>
+      <div style="text-align: center;">
+        <p style="text-align: center;">Gio</p>
+        <img style="width: 1.5rem;" src="http://openweathermap.org/img/wn/10d@2x.png" />
+        <p style="text-align: center;font-size: .8rem;">23°/30°</p>
+      </div>
+      <div style="text-align: center;">
+        <p style="text-align: center;">Ven</p>
+        <img style="width: 1.5rem;" src="http://openweathermap.org/img/wn/10d@2x.png" />
+        <p style="text-align: center;font-size: .8rem;">23°/30°</p>
+      </div>
+      <div style="text-align: center;">
+        <p style="text-align: center;">Sab</p>
+        <img style="width: 1.5rem;" src="http://openweathermap.org/img/wn/10d@2x.png" />
+        <p style="text-align: center;font-size: .8rem;">23°/30°</p>
+      </div>
+      <div style="text-align: center;">
+        <p style="text-align: center;">Dom</p>
+        <img style="width: 1.5rem;" src="http://openweathermap.org/img/wn/10d@2x.png" />
+        <p style="text-align: center;font-size: .8rem;">23°/30°</p>
+      </div>
+    </div>
+    <div class="footer">
+      <p style="text-align: center;font-size: 3rem;color:darkred" class="f-bold">wave</p>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
